@@ -15,7 +15,9 @@ public:
     double getGrade();
     void incrementGrade();
     void decrementGrade();
-    void GradeTooHighException();
+    class GradeTooHighException : public std::exception{
+        
+    };
     void GradeTooLowException();
     std::ostream& operator<<(std::ostream& os);
 };
