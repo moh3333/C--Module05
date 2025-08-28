@@ -1,32 +1,18 @@
 #include <cmath> // for sqrt() function
 #include <iostream>
 
-// A modular square root function
-double mySqrt(double x)
-{
-    // If the user entered a negative number, this is an error condition
-    if (x < 0.0)
-        throw "Can not take sqrt of negative number"; // throw exception of type const char*
-    std::cout <<"another sqr \n";
-    return std::sqrt(x);
+class Shape {
+public:
+    virtual void draw() { std::cout << "Shape draw\n"; }
+};
+class Circle : public Shape {
+public:
+    void draw()  { std::cout << "Circle draw\n"; }
+};
+void render(Shape* s) {
+    s->draw();  // Calls the appropriate version at runtime
 }
-
-int main()
-{
-    std::cout << "Enter a number: ";
-    double x {};
-    std::cin >> x;
-
-    try // Look for exceptions that occur within try block and route to attached catch block(s)
-    {
-        double d = mySqrt(x);
-        std::cout << "The sqrt of " << x << " is " << d << '\n';
-        std::cout << "nnnnnnnnnnnnnnnn\n";
-    }
-    catch (const char* exception) // catch exceptions of type const char*
-    {
-        std::cerr << "Error: " << exception << std::endl;
-    }
-
-    return 0;
+int main(){
+    Shape s;
+    render(&s);
 }
