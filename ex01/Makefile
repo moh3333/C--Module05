@@ -4,11 +4,11 @@ CC= c++
 
 CPPFLAGS= -std=c++98 -Wall -Wextra -Werror 
 
-SRC= Bureaucrat.cpp main.cpp
+SRC= Form.cpp Bureaucrat.cpp  main.cpp
 
-OBJ= main.o Bureaucrat.o
+OBJ= main.o Form.o Bureaucrat.o 
 
-HEADER= Bureaucrat.hpp
+HEADER= Bureaucrat.hpp Form.hpp
 
 all: $(NAME)
 

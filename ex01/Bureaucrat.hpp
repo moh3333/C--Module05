@@ -2,7 +2,9 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
 
+class Form;
 
 class Bureaucrat {
     const std::string Name;
@@ -26,7 +28,10 @@ public:
     class GradeTooLowException : public std::exception{
         const char* what() const throw();
     };
+
+    void signForm(Form& F);
 };
+
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& objct);
 
 #endif
