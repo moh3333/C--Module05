@@ -4,13 +4,13 @@
 int main(){
 
     std::cout <<  "\033[32m" << "_____(DEFAULT CONSTUCTOR )TESTING : PRINT  FOMR INFOS " << "\033[0m" << std::endl;
-    std::cout << "____________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     Form a;
     std::cout << a << std::endl;
 
     std::cout <<  "\033[32m" << "\n_____(BUREAUCRAT TRYING TO SING FORM )TESTING WITH VALID GRADE =>  DEFAULT (LOWEST POSIBLE GRADES)" << "\033[0m" << std::endl;
 
-    std::cout << "_______________________________________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     Bureaucrat d;
     Form s;
     try {
@@ -30,7 +30,7 @@ int main(){
 
 
     std::cout <<  "\033[32m" << "\n(_____FORM PARMETRIZE CONSTRUCTOR )TESTING WITH TOO HIGHT SIGN GRADE AND VALID EXEC GRADE " << "\033[0m" << std::endl;
-    std::cout << "_______________________________________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     try{
         Form b("FIRST_FORM", 0, 1);
     }
@@ -40,7 +40,7 @@ int main(){
     }
 
     std::cout <<  "\033[32m" << "\n_____(FORM PARMETRIZE CONSTRUCTOR )TESTING WITH TOO HIGHT EXEC GRADE AND VALID SIGN GRADE " << "\033[0m" << std::endl;
-    std::cout << "_______________________________________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     try{
         Form b("SECEND_FORM", 1, 0);
     }
@@ -51,7 +51,7 @@ int main(){
 
 
     std::cout <<  "\033[32m" << "\n_____(BUREAUCRAT WITH TOO LOW SIGN GRADE TRYING TO SIGN A FORM )TESTING WITH TOO LOW GRADE EXCEPTION TO SIGN" << "\033[0m" << std::endl;
-    std::cout << "____________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     Bureaucrat c("FIRST_BUREAUCRAT", 110);
     Form h("THIRD_FORM", 100, 100);
     try{
@@ -68,7 +68,7 @@ int main(){
 
     std::cout <<  "\033[32m" << "\n_____(BUREAUCRAT TRYING TO SING FORM )TESTING WITH VALID GRADE " << "\033[0m" << std::endl;
 
-    std::cout << "____________________________________________________________________________________________________________\n" << std::endl;
+    std::cout << "___________________________\n" << std::endl;
     Bureaucrat d("SECEND_BUREAUCRAT", 2);
     Form s("FOURTH_FORM", 10, 10);
     try {
