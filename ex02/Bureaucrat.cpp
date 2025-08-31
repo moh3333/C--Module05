@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 
 Bureaucrat::Bureaucrat():Name ("Default_name"), Grade(150){}
@@ -67,4 +67,8 @@ void Bureaucrat::signForm(Form& F){
         std::cout << this->Name << " couldn’t sign "  << F.getName() << " because " << e.what() << std::endl;
         throw;
     }
+}
+
+void    Bureaucrat::executeForm(AForm const& form){
+
 }

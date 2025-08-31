@@ -30,6 +30,7 @@ public:
     };
 
     void signForm(Form& F);
+    void    executeForm(AForm const& form);
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& objct);
