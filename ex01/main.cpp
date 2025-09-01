@@ -69,20 +69,20 @@ int main(){
     std::cout <<  "\033[32m" << "\n_____(BUREAUCRAT TRYING TO SING FORM )TESTING WITH VALID GRADE " << "\033[0m" << std::endl;
 
     std::cout << "____________________________________________________________________________________________________________\n" << std::endl;
-    Bureaucrat d("SECEND_BUREAUCRAT", 2);
-    Form s("FOURTH_FORM", 10, 10);
+    Bureaucrat x("SECEND_BUREAUCRAT", 2);
+    Form m("FOURTH_FORM", 10, 10);
     try {
-        std::cout << d << std::endl;
+        std::cout << x << std::endl;
         std::cout << std::endl;
-        std::cout << s << std::endl;
+        std::cout << m << std::endl;
         std::cout << std::endl;
-        d.signForm(s);
+        x.signForm(m);
     }
     catch(const std::exception& e){
         std::cout << std::endl;
         std::cout << e.what() << std::endl;
     }
     std::cout << std::endl;
-    std::cout << s << std::endl;
+    std::cout << m << std::endl;
     std::cout << std::endl;
 }
