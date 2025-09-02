@@ -2,7 +2,7 @@
 
 PresidentialPardonForm::PresidentialPardonForm():AForm("PresidentialPardonForm", 72, 45), Target("Default"){}
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string name):AForm("name", 72, 45), Target(name){}
+PresidentialPardonForm::PresidentialPardonForm(const std::string name):AForm(name, 72, 45), Target(name){}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other):AForm(other), Target(other.Target){}
 
