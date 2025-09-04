@@ -24,7 +24,7 @@ AForm::AForm(std::string name, const int GradeSign, const int ExecGrade):Name(na
         throw GradeTooHighException();
 }
 
-AForm::AForm(const AForm& F):Name(F.Name), isSigned(false) , GradeToSign(F.GradeToSign), GradeToExecute(F.GradeToExecute){}
+AForm::AForm(const AForm& F):Name(F.Name), isSigned(F.isSigned) , GradeToSign(F.GradeToSign), GradeToExecute(F.GradeToExecute){}
 
 AForm& AForm::operator=(const AForm& other){
     if (this != &other){
@@ -61,7 +61,7 @@ void        AForm::beSigned(Bureaucrat& Br){
 void        AForm::execute(Bureaucrat const& executor) const{
     if (!getisSigned())
         throw FormNotSignedException(); 
-    if (executor.getGrade() > getGradeToExecute())
+    if (executor.getGrade() >= getGradeToExecute())
         throw AForm::GradeTooLowException();
 
     TakeAction();

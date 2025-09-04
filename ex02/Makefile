@@ -4,11 +4,11 @@ CC= c++
 
 CPPFLAGS= -std=c++98 -Wall -Wextra -Werror 
 
-SRC= AForm.cpp Bureaucrat.cpp  main.cpp ShrubberyCreationForm.cpp
+SRC= AForm.cpp Bureaucrat.cpp  main.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
 
-OBJ= main.o AForm.o Bureaucrat.o ShrubberyCreationForm.o
+OBJ= main.o AForm.o Bureaucrat.o ShrubberyCreationForm.o PresidentialPardonForm.o RobotomyRequestForm.o
 
-HEADER= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp
+HEADER= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp
 
 all: $(NAME)
 

@@ -17,6 +17,10 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 RobotomyRequestForm::~RobotomyRequestForm(){}
 
 void        RobotomyRequestForm::TakeAction() const{
-    std::cout << Target + " has been pardoned by Zaphod Beeblebrox ." << std::endl;
+
+    static bool s = true ;
+    std::cout << (s ? ( "DRILLING NOISES ZZZZZZ  ...  " + Target + \
+        " has been robotomized successfully " ) : "\033[31m the robotomy failed \033[0m" ) << std::endl;
+    s = !s;
 }
 

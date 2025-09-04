@@ -22,7 +22,7 @@ public:
     void decrementGrade();
 
     class GradeTooHighException : public std::exception{ 
-        const char* what() const throw ();
+        const char* what() const throw();
     };
 
     class GradeTooLowException : public std::exception{

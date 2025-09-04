@@ -2,7 +2,7 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm():AForm("ShrubberyCreationForm", 145, 137), FileName("DefaultFile"){}
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string name):AForm("name", 145, 137), FileName(name + "_shrubbery"){}
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string name):AForm(name, 145, 137), FileName(name + "_shrubbery"){}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other):AForm(other), FileName(other.FileName){}
 
@@ -19,17 +19,18 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){}
 void        ShrubberyCreationForm::TakeAction() const {
 
     std::ofstream Outfile(this->FileName);
-
-    Outfile << "       /\\\n";
-    Outfile << "      /**\\\n";
-    Outfile << "     /****\\\n";
-    Outfile << "    /******\\\n";
-    Outfile << "   /********\\\n";
-    Outfile << "  /**********\\\n";
-    Outfile << " /************\\\n";
-    Outfile << "/**************\\\n";
-    Outfile << "      ||\n";
-    Outfile << "      ||\n";
-    Outfile << "      ||\n";
+    for (int i(0); i < 3; i++){
+        Outfile << "       /\\\n";
+        Outfile << "      /**\\\n";
+        Outfile << "     /****\\\n";
+        Outfile << "    /******\\\n";
+        Outfile << "   /********\\\n";
+        Outfile << "  /**********\\\n";
+        Outfile << " /************\\\n";
+        Outfile << "/**************\\\n";
+        Outfile << "      ||\n";
+        Outfile << "      ||\n";
+        Outfile << "      ||\n";
+    }
 }
 

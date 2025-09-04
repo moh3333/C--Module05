@@ -28,17 +28,18 @@ class AForm {
             const char * what() const throw();
         };
 
-        const std::string&  getName() const;
-        bool          getisSigned() const;
-        int           getGradeToSign() const;
-        int           getGradeToExecute() const;
-
-        void        beSigned(Bureaucrat& Br);
-        virtual void        execute(Bureaucrat const& executor) const;
-
         class FormNotSignedException: public std::exception {
             const char * what() const throw(); 
         };
+        
+        const std::string&  getName() const;
+        bool                getisSigned() const;
+        int                 getGradeToSign() const;
+        int                 getGradeToExecute() const;
+
+        void                beSigned(Bureaucrat& Br);
+        virtual void        execute(Bureaucrat const& executor) const;
+
     protected :
         virtual void        TakeAction() const = 0;
 };   

@@ -6,7 +6,7 @@ const char* Form::GradeTooLowException::what() const throw(){
 }
 
 const char* Form::GradeTooHighException::what() const throw() {
-    return ("Form : Grade too Hight exception!");
+    return ("Form : Grade too High exception!");
 }
 
 Form::Form():Name("Default"), isSigned(false), GradeToSign(150), GradeToExecute(150){
@@ -20,7 +20,7 @@ Form::Form(std::string name, const int GradeSign, const int ExecGrade):Name(name
         throw GradeTooHighException();
 }
 
-Form::Form(const Form& F):Name(F.Name), isSigned(false) , GradeToSign(F.GradeToSign), GradeToExecute(F.GradeToExecute){}
+Form::Form(const Form& F):Name(F.Name), isSigned(F.isSigned) , GradeToSign(F.GradeToSign), GradeToExecute(F.GradeToExecute){}
 
 Form& Form::operator=(const Form& other){
     if (this != &other){
@@ -35,15 +35,15 @@ const std::string&  Form::getName() const{
     return Name;
 }
 
-bool  Form::getisSigned(){
+bool  Form::getisSigned() const{
     return isSigned;
 }
 
-int   Form::getGradeToSign(){
+int   Form::getGradeToSign() const{
     return GradeToSign;
 }
 
-int   Form::getGradeToExecute(){
+int   Form::getGradeToExecute() const{
     return GradeToExecute;
 }
 
